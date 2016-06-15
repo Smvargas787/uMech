@@ -22,4 +22,4 @@ DEBUG=true mocha
 [Airbnb](https://github.com/airbnb/javascript)
 
 ##Contributors
-- [View Contributors](https://github.com/seanedw1/appstore/graphs/contributors)
+- [View Contributors](https://github.com/seanedw1/uTool/graphs/contributors)
