@@ -2,7 +2,7 @@
 
 ### Package Dependencies
 
-### Install the dependencies in the package.json file.
+##### Install the dependencies in the package.json file.
 
 In command line run these commands:
 
