@@ -1,5 +1,4 @@
 exports.debug = (title, obj, status) => {
-  // const util = require('../lib/util.js');
   const seperator = '\n==================================\n';
   const output = seperator + title + status + obj + seperator; // + stamp;
 
