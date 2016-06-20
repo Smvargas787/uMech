@@ -1,23 +1,32 @@
 exports.debug = (title, obj, status) => {
+  const stamp = new Date();
+  const colors = require('colors');
+  colors.setTheme({
+    silly: 'rainbow',
+    input: 'grey',
+    verbose: 'cyan',
+    prompt: 'grey',
+    info: 'green',
+    data: 'grey',
+    help: 'cyan',
+    warn: 'yellow',
+    debug: 'blue',
+    error: 'red',
+  });
   const seperator = '\n==================================\n';
-  const output = seperator + title + status + obj + seperator; // + stamp;
+
+  const output = colors.data(seperator) + ' ' + colors.info(title) + ' ';
+
+  const output2 = colors.verbose(obj) + ' ' + colors.debug(stamp) + ' ' + colors.debug(status);
 
   // requiring the file system(fs) to create/ write logging files
   const fs = require('fs');
 
-  // node logging requires a time stamp formatting to be sets
-  // const stamp =
-
-  // if debug equALS == 1 true run this block
   if (process.env.DEBUG) {
-    // console.log(output, obj, status);
-
 // fs.appendFile(file, data[, options], callback)
-// Asynchronously append data to a file, creating the file if it does not yet exist.
-    fs.appendFile('logs/eLog.log', output, 'utf8', (err) => {
-      if (err) {
-//  console.log('The data was appended to file!');
-      }
+    fs.appendFile('logs/eLog.log', output, (err) => {
+      if (err) throw err;
+      console.log(output + output2);
     });
   }
 };

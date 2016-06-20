@@ -7,7 +7,7 @@
 In command line run these commands:
 
 ```
-npm i -g mocha nodemon supertest
+npm i -g mocha nodemon
 
 npm i
 ```
