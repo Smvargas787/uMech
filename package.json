@@ -1,6 +1,6 @@
 {
   "name": "uMech",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "utility tool package",
   "main": "umech.js",
   "scripts": {
