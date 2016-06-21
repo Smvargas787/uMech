@@ -1,10 +1,10 @@
 {
-  "name": "umech",
+  "name": "uMech",
   "version": "1.0.0",
   "description": "utility tool package",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "seanedw1",
   "license": "ISC",

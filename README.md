@@ -1,23 +1,13 @@
-#uTool
+#uMech
 
-### Package Dependencies
+### Debug utility tool
 
-##### Install the dependencies in the package.json file.
-
-In command line run these commands:
+###usage
 
 ```
-npm i -g mocha nodemon
-
-npm i
-```
-
-Debug utility tool
-```
-DEBUG=true mocha
+DEBUG=true
 
 ```
-
 ######Style Guide reference
 [Airbnb](https://github.com/airbnb/javascript)
 
