@@ -1,15 +1,14 @@
 {
   "name": "uMech",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "utility tool package",
-  "main": "umech.js",
+  "main": "src/umech.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "seanedw1",
   "license": "ISC",
   "devDependencies": {
-    "colors": "^1.1.2",
     "eslint": "^2.12.0",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.8.1",
@@ -17,6 +16,7 @@
     "eslint-plugin-react": "^5.1.1"
   },
   "dependencies": {
+    "colors": "^1.1.2",
     "chai": "^3.5.0",
     "dotenv": "^2.0.0",
     "mocha": "^2.5.3",
