@@ -1,5 +1,7 @@
 #uMech
 
+[ ![codeship status for seanedw1/uMech](https://codeship.com/projects/eb9aa840-1b07-0134-0f10-0e8ad2af7d49/status?branch=master)](https://codeship.com/projects/159540)
+
 ## Install packages
 
 In terminal run commands below to install package
