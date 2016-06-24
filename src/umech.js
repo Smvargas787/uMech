@@ -29,30 +29,19 @@ exports.debug = (title, obj, status) => {
   }
 };
 
-exports.increaser = (thisVersion, semVersion) => {
-  let patches = thisVersion.patch;
-  let minor = thisVersion.minor;
-  let major = thisVersion.major;
-  if (typeof semVersion) {
-    if (semVersion === 'patches') {
-      patches += 1;
-      console.warn('You have made a patch');
-      // the if statement for patches
-    }
-    if (semVersion === 'minor') {
-      minor += 1;
-      console.warn('You have made a minor change');
-      // the if statement for the minor fixes
-    }
-    if (semVersion === 'major') {
-      patches = 0;
-      minor = 0;
-      major += 1;
-      console.warn('This is a very serious change please be sure that this is working');
-      // this is the  if statement for the major fixes.
-    }
-  }
-};
+if (status === null){
+      const warningM = output + obj + output2 + ' Warning! Status is Null!';
+      console.warn(colors.warn(warningM));
 
-console.log(pajson.version);
-// This is going to be used to tell you the current version of you package.json
+        }else{
+        console.log(output + obj + output2 + status ' Loading Output')
+    }
+
+  if (process.env.DEBUG) {
+        console.log(output + obj + output2 + title ' Loading Output')
+      }else{
+        const errM = output + obj + output2 + ' Failed to Load Output';
+        console.error(colors.error(errM));
+}
+}
+};
