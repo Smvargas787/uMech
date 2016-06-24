@@ -20,13 +20,9 @@ exports.debug = (title, obj, status) => {
   const output2 = colors.verbose(obj) + ' ' + colors.debug(stamp) + ' ' + colors.debug(status);
 
   // requiring the file system(fs) to create/ write logging files
-  const fs = require('fs');
 
   if (process.env.DEBUG) {
 // fs.appendFile(file, data[, options], callback)
-    fs.appendFile('logs/eLog.log', output, (err) => {
-      if (err) throw err;
-      console.log(output + output2);
-    });
+    console.log(output + output2);
   }
 };
