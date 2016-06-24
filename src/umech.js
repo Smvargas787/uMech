@@ -27,7 +27,7 @@ exports.debug = (title, obj, status) => {
   }
 };
 
-exports.bump = (thisVersion, semVersion) => {
+exports.increaser = (thisVersion, semVersion) => {
   let patches = thisVersion.patch;
   let minor = thisVersion.minor;
   let major = thisVersion.major;
