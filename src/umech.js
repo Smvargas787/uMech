@@ -14,7 +14,7 @@ exports.debug = (title, obj, status) => {
     debug: 'blue',
     error: 'red',
   });
-  const seperator = '\n==================================\n';
+  const seperator = '\n============(*) Y (*)============\n';
 
   const output = colors.data(seperator) + ' ' + colors.info(title) + ' ';
 
@@ -23,6 +23,7 @@ exports.debug = (title, obj, status) => {
 
   if (process.env.DEBUG) {
     console.log(output + output2);
+    // I took out the route to the logging file that is
   }
 };
 
@@ -34,18 +35,22 @@ exports.increaser = (thisVersion, semVersion) => {
     if (semVersion === 'patches') {
       patches += 1;
       console.warn('You have made a patch');
+      // the if statement for patches
     }
     if (semVersion === 'minor') {
       minor += 1;
       console.warn('You have made a minor change');
+      // the if statement for the minor fixes
     }
     if (semVersion === 'major') {
       patches = 0;
       minor = 0;
       major += 1;
       console.warn('This is a very serious change please be sure that this is working');
+      // this is the  if statement for the major fixes.
     }
   }
 };
 
 console.log(pajson.version);
+// This is going to be used to tell you the current version of you package.json
