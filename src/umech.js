@@ -1,5 +1,4 @@
 const pajson = require('../package.json');
-let newVersion;
 exports.debug = (title, obj, status) => {
   const stamp = new Date();
   const colors = require('colors');
@@ -48,6 +47,5 @@ exports.increaser = (thisVersion, semVersion) => {
     }
   }
 };
-
 
 console.log(pajson.version);
