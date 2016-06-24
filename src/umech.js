@@ -24,6 +24,8 @@ exports.debug = (title, obj, status) => {
   if (process.env.DEBUG) {
     console.log(output + output2);
     // I took out the route to the logging file that is catching the logs.
+  } else {
+    console.error(new Error('The debugging tool did not find this'));
   }
 };
 
