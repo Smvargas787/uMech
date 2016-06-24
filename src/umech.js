@@ -1,4 +1,5 @@
 const pajson = require('../package.json');
+let newVersion;
 exports.debug = (title, obj, status) => {
   const stamp = new Date();
   const colors = require('colors');
@@ -20,10 +21,8 @@ exports.debug = (title, obj, status) => {
 
   const output2 = colors.verbose(obj) + ' ' + colors.debug(stamp) + ' ' + colors.debug(status);
 
-  // requiring the file system(fs) to create/ write logging files
 
   if (process.env.DEBUG) {
-// fs.appendFile(file, data[, options], callback)
     console.log(output + output2);
   }
 };
@@ -35,16 +34,20 @@ exports.bump = (thisVersion, semVersion) => {
   if (typeof semVersion) {
     if (semVersion === 'patches') {
       patches += 1;
+      console.warn('You have made a patch');
     }
     if (semVersion === 'minor') {
       minor += 1;
+      console.warn('You have made a minor change');
     }
     if (semVersion === 'major') {
       patches = 0;
       minor = 0;
       major += 1;
+      console.warn('This is a very serious change please be sure that this is working');
     }
   }
 };
+
 
 console.log(pajson.version);
