@@ -14,7 +14,7 @@ exports.debug = (title, obj, status) => {
     debug: 'blue',
     error: 'red',
   });
-  const seperator = '\n============(*) Y (*)============\n';
+  const seperator = '\n============(*)_(*)============\n';
 
   const output = colors.data(seperator) + ' ' + colors.info(title) + ' ';
 
@@ -23,7 +23,7 @@ exports.debug = (title, obj, status) => {
 
   if (process.env.DEBUG) {
     console.log(output + output2);
-    // I took out the route to the logging file that is
+    // I took out the route to the logging file that is catching the logs.
   }
 };
 
