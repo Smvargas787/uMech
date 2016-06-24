@@ -29,19 +29,30 @@ exports.debug = (title, obj, status) => {
   }
 };
 
-if (status === null){
-      const warningM = output + obj + output2 + ' Warning! Status is Null!';
-      console.warn(colors.warn(warningM));
 
-        }else{
-        console.log(output + obj + output2 + status ' Loading Output')
+exports.bump = (currentV, certainSetUpdate) => {
+  const major = currentV.major;
+  const minor = currentV.minor;
+  const patch = currentV.patch;
+
+  if(certainOf certainSetUpdate){
+
+    if (certainSetUpdate === 'major'){
+      patch = 0;
+      minor = 0;
+      major += 1;
     }
+    if (certainSetUpdate === 'minor'){
+      minor += 1;
+      patch = 0;
 
-  if (process.env.DEBUG) {
-        console.log(output + obj + output2 + title ' Loading Output')
-      }else{
-        const errM = output + obj + output2 + ' Failed to Load Output';
-        console.error(colors.error(errM));
+    }
+    if (certainSetUpdate === 'patch'){
+      patch += 1;
+    }
+  }
+} else {
+  console.warn('Second argument must be entered');
 }
-}
+return 'Version: ' + major + '.' + minor + '.' + patch;
 };
