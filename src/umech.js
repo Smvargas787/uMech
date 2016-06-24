@@ -1,3 +1,4 @@
+const pajson = require('../package.json');
 exports.debug = (title, obj, status) => {
   const stamp = new Date();
   const colors = require('colors');
@@ -26,3 +27,24 @@ exports.debug = (title, obj, status) => {
     console.log(output + output2);
   }
 };
+
+exports.bump = (thisVersion, semVersion) => {
+  let patches = thisVersion.patch;
+  let minor = thisVersion.minor;
+  let major = thisVersion.major;
+  if (typeof semVersion) {
+    if (semVersion === 'patches') {
+      patches += 1;
+    }
+    if (semVersion === 'minor') {
+      minor += 1;
+    }
+    if (semVersion === 'major') {
+      patches = 0;
+      minor = 0;
+      major += 1;
+    }
+  }
+};
+
+console.log(pajson.version);
